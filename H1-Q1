@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,4 +21,4 @@ kdvLi=kdvSiz+kdvTutari;
         System.out.println("KDV'siz Fiyat: " + kdvSiz + " TL");
         System.out.println("KDV Oranı: %" + kdvOran);
         System.out.println("KDV Tutarı: " + kdvTutari + " TL");
-        System.out.println("KDV'li Fiyat: " + kdvLi + " TL");
+        System.out.println("KDV'li Fiyat: " + kdvLi + " TL");}}
