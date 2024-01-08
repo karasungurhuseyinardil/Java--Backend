@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+Scanner scan= new Scanner(System.in);
+
+
+System.out.println("Hava durumu kodu girin: ");
+        int havaDurumuKodu = scan.nextInt();
+
+        String havaDurumu;
+
+        switch (havaDurumuKodu) {
+            case 1:
+                havaDurumu = "Güneşli";
+                break;
+            case 2:
+                havaDurumu = "Yağmurlu";
+                break;
+            case 3:
+                havaDurumu = "Karlı";
+                break;
+            case 4:
+                havaDurumu = "Bulutlu";
+                break;
+            default:
+                havaDurumu = "Geçersiz hava durumu kodu";
+        }
+
+        System.out.println("Hava durumu: " + havaDurumu);}}
