@@ -1,0 +1,38 @@
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+Scanner scan= new Scanner(System.in);
+
+double sayi1, sayi2;
+
+        System.out.println("Sayi 1 giriniz");
+        sayi1= scan.nextDouble();
+
+        System.out.println("Sayi 2 giriniz");
+        sayi2= scan.nextDouble();
+
+
+        System.out.println("İşlem tipini seçin: ");
+        System.out.println("1 - Toplama");
+        System.out.println("2 - Çıkarma");
+        System.out.println("3 - Çarpma");
+        System.out.println("4 - Bölme");
+        int islemTipi = scan.nextInt();
+
+
+        if (islemTipi == 1) {
+            System.out.println("Toplam: " + (sayi1 + sayi2));
+        } else if (islemTipi == 2) {
+            System.out.println("Fark: " + (sayi1 - sayi2));
+        } else if (islemTipi == 3) {
+            System.out.println("Çarpım: " + (sayi1 * sayi2));
+        } else if (islemTipi == 4) {
+            if (sayi2 != 0) {
+                System.out.println("Bölüm: " + (sayi1 / sayi2));
+            } else {
+                System.out.println("Bir sayıyı sıfıra bölemezsiniz!");
+            }
+        } else {
+            System.out.println("Geçersiz işlem tipi!");
+        }}}
