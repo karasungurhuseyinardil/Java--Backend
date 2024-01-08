@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+Scanner scan= new Scanner(System.in);
+double kdvOran = 0, kdvSiz,kdvLi;
+
+
+
+        System.out.println("Kdv'siz fiyati giriniz");
+        kdvSiz=scan.nextDouble();
+
+        if(kdvSiz>=0 && kdvSiz<=1000){
+      kdvOran=10.0;
+        }
+        else if(kdvSiz>1000){
+            kdvOran=22.0;
+        }
+        else{
+            System.out.println("Gecerli Deger giriniz.");
+        }
+
+        double kdvTutari= kdvOran*kdvSiz/100;
+        kdvLi=kdvSiz+kdvTutari;
+
+
+
+        System.out.println("KDV'siz Fiyat: " + kdvSiz + " TL");
+        System.out.println("KDV Oranı: %" + kdvOran);
+        System.out.println("KDV Tutarı: " + kdvTutari + " TL");
+        System.out.println("KDV'li Fiyat: " + kdvLi + " TL");
+}}
