@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+Scanner scan= new Scanner(System.in);
+System.out.println("Hangi geometrik şeklin alanını hesaplamak istiyorsunuz?");
+        System.out.println("1 - Dikdörtgen");
+        System.out.println("2 - Kare");
+        System.out.println("3 - Üçgen");
+
+        int secim = scan.nextInt();
+        double alan = 0;
+
+        switch (secim) {
+            case 1:
+                System.out.println("Dikdörtgenin uzun kenarını girin: ");
+                double uzunKenar = scan.nextDouble();
+                System.out.println("Dikdörtgenin kısa kenarını girin: ");
+                double kisaKenar = scan.nextDouble();
+
+                if(uzunKenar<kisaKenar){
+                    System.out.println("Ters girdiniz ancak sonucunuz.");
+                }else if(uzunKenar==kisaKenar){
+                    System.out.println("Bu bir kare");
+                }
+
+                alan = uzunKenar * kisaKenar;
+                break;
+            case 2:
+                System.out.println("Karenin kenar uzunluğunu girin: ");
+                double kenar = scan.nextDouble();
+                alan = kenar * kenar;
+                break;
+            case 3:
+                System.out.println("Üçgenin taban uzunluğunu girin: ");
+                double taban = scan.nextDouble();
+                System.out.println("Üçgenin yüksekliğini girin: ");
+                double yukseklik = scan.nextDouble();
+                alan = (taban * yukseklik) / 2;
+                break;
+            default:
+                System.out.println("Geçersiz seçim!");
+        }
+
+        if (secim >= 1 && secim <= 3) {
+            System.out.println("Seçilen şeklin alanı: " + alan);
+        }}}
