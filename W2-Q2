@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
+
+        public class Main {
+
+            public static void main(String[] args) {
+                // Rastgele sayılar içeren ArrayList
+                ArrayList<Integer> sayiListesi = new ArrayList<>();
+                Random random = new Random();
+
+                // 0 ile 100 arasında 10 rastgele sayı ekleyelim
+                for (int i = 0; i < 10; i++) {
+                    sayiListesi.add(random.nextInt(101));
+                }
+
+                // Çift sayıları içeren HashSet
+                Set<Integer> ciftSayilar = new HashSet<>();
+
+
+                ArrayList<Integer> tekSayilar = new ArrayList<>();
+
+                // Rastgele sayıları kontrol ederek çift ve tek sayılara ayırma
+                for (int sayi : sayiListesi) {
+                    if (sayi % 2 == 0) {
+                        ciftSayilar.add(sayi);
+                    } else {
+                        tekSayilar.add(sayi);
+                    }
+                }
+
+                // Sonuçları ekrana yazdırma
+                System.out.println("Rastgele Sayılar: " + sayiListesi);
+                System.out.println("Çift Sayılar: " + ciftSayilar);
+                System.out.println("Tek Sayılar: " + tekSayilar);
+            }
+        }
