@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Calculator");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.print("Choose the operation you want to perform (1-4): ");
+
+        int choice = scanner.nextInt();
+
+        System.out.print("Enter the first number: ");
+        double number1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double number2 = scanner.nextDouble();
+
+        double result = 0;
+
+        switch (choice) {
+            case 1:
+                result = number1 + number2;
+                break;
+            case 2:
+                result = number1 - number2;
+                break;
+            case 3:
+                result = number1 * number2;
+                break;
+            case 4:
+                if (number2 != 0) {
+                    result = number1 / number2;
+                } else {
+                    System.out.println("Error: Division by zero is not allowed.");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Invalid choice.");
+                return;
+        }
+
+        System.out.println("Result: " + result);
+    }
+}
