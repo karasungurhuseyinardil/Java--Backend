@@ -4,21 +4,27 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Permutasyonu  hesaplanacak sayıyı girin (n): ");
+       
+        System.out.print("Enter the number for permutation calculation (n): ");
         int n = scanner.nextInt();
 
-        System.out.print("Kaçlı permütasyon olacak? (r): ");
+        System.out.print("Enter the value for permutation (r): ");
         int r = scanner.nextInt();
 
-        if (n < 0 || r < 0 || n < r) {
-            System.out.println("Geçersiz giriş! n ve r pozitif tam sayılar olmalıdır, n >= r olmalıdır.");
+        // Check if inputs are valid
+        if (n < 0 || r < 0) {
+            System.out.println("Invalid input! n and r must be positive integers.");
+        } else if (n < r) {
+            System.out.println("Invalid input! n should be greater than or equal to r.");
         } else {
+            // Calculate and display the permutation result
             int result = calculatePermutation(n, r);
             System.out.println("P(" + n + ", " + r + ") = " + result);
         }
 
         scanner.close();
     }
+
 
     public static int calculatePermutation(int n, int r) {
         if (r == 0) {
