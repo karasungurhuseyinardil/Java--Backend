@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        double number1, number2;
+
+        System.out.println("Enter number 1: ");
+        number1 = scan.nextDouble();
+
+        System.out.println("Enter number 2: ");
+        number2 = scan.nextDouble();
+
+        System.out.println("Select the operation type: ");
+        System.out.println("1 - Addition");
+        System.out.println("2 - Subtraction");
+        System.out.println("3 - Multiplication");
+        System.out.println("4 - Division");
+        int operationType = scan.nextInt();
+
+        switch (operationType) {
+
+            case 1:
+                System.out.println("Sum: " + (number1 + number2));
+                break;
+
+            case 2:
+                System.out.println("Difference: " + (number1 - number2));
+                break;
+            case 3:
+                System.out.println("Product: " + (number1 * number2));
+                break;
+            case 4:
+                if (number2 != 0) {
+                    System.out.println("Quotient: " + (number1 / number2));
+                } else {
+                    System.out.println("You cannot divide by zero!");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid operation type!");
+        }
+    }
+}
