@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the weather code: ");
+        int weatherCode = scan.nextInt();
+
+        String weatherCondition;
+
+        switch (weatherCode) {
+            case 1:
+                weatherCondition = "Sunny";
+                break;
+            case 2:
+                weatherCondition = "Rainy";
+                break;
+            case 3:
+                weatherCondition = "Snowy";
+                break;
+            case 4:
+                weatherCondition = "Cloudy";
+                break;
+            default:
+                weatherCondition = "Invalid weather code";
+        }
+
+        System.out.println("Weather condition: " + weatherCondition);
+    }
+}
