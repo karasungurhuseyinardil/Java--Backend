@@ -1,32 +1,27 @@
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
 
-Scanner scan= new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
+        int grade;
+        System.out.println("Enter the Grade:");
 
-int not;
-        System.out.println("Not Giriniz");
+        grade = scan.nextInt();
 
-     not= scan.nextInt();;
-
-     if(not>=90 && not<=100){
+        if (grade >= 90 && grade <= 100) {
             System.out.println("AA");
+        } else if (grade >= 80 && grade < 90) {
+            System.out.println("BA");
+        } else if (grade >= 70 && grade < 80) {
+            System.out.println("BB");
+        } else if (grade >= 60 && grade < 70) {
+            System.out.println("CB");
+        } else if (grade >= 50 && grade < 60) {
+            System.out.println("CC");
+        } else {
+            System.out.println("FF");
         }
-     else if(not>=80 && not<90){
-         System.out.println("BA");
-     }
-     else if(not>=70 && not<80){
-         System.out.println("BB");}
-
-           else if(not>=60 && not<70) {
-         System.out.println("CB");
-     }
-               else if(not>=50 && not<60) {
-         System.out.println("CC");
-     }          else{
-                     System.out.println("FF");
-
-    }}}
+    }
+}
