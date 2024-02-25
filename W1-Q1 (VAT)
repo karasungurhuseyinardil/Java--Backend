@@ -1,24 +1,24 @@
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
 
-Scanner scan= new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
+        double vatRate, priceWithoutVat, priceWithVat;
 
-double kdvOran, kdvSiz,kdvLi;
+        System.out.println("Enter VAT rate:");
+        vatRate = scan.nextDouble();
 
-        System.out.println("Kdv Orani giriniz");
-        kdvOran=scan.nextDouble();
+        System.out.println("Enter price without VAT:");
+        priceWithoutVat = scan.nextDouble();
 
-        System.out.println("Kdv'siz fiyati giriniz");
-        kdvSiz=scan.nextDouble();
+        double vatAmount = (vatRate * priceWithoutVat) / 100;
+        priceWithVat = priceWithoutVat + vatAmount;
 
-double kdvTutari= kdvOran*kdvSiz/100;
-kdvLi=kdvSiz+kdvTutari;
-
-        System.out.println("KDV'siz Fiyat: " + kdvSiz + " TL");
-        System.out.println("KDV Oranı: %" + kdvOran);
-        System.out.println("KDV Tutarı: " + kdvTutari + " TL");
-        System.out.println("KDV'li Fiyat: " + kdvLi + " TL");}}
+        System.out.println("Price without VAT: " + priceWithoutVat + " TL");
+        System.out.println("VAT Rate: %" + vatRate);
+        System.out.println("VAT Amount: " + vatAmount + " TL");
+        System.out.println("Price with VAT: " + priceWithVat + " TL");
+    }
+}
